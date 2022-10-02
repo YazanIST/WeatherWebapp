@@ -1,0 +1,5 @@
+https://start.spring.io/#!type=maven-project&language=java&platformVersion=2.7.4&packaging=jar&jvmVersion=1.8&groupId=com.atypon&artifactId=data_entry&name=data_entry&description=Weather%20Entries%20&packageName=com.atypon.data_entry&dependencies=web,data-jdbc,mysql
+
+https://start.spring.io/#!type=maven-project&language=java&platformVersion=2.7.4&packaging=jar&jvmVersion=1.8&groupId=com.atypon&artifactId=authentication_service&name=authentication_service&description=Authentication%20Service&packageName=com.atypon.authentication_service&dependencies=web
+
+https://start.spring.io/#!type=maven-project&language=java&platformVersion=2.7.4&packaging=jar&jvmVersion=1.8&groupId=com.atypon&artifactId=analytics_service&name=analytics_service&description=Analytics%20Service&packageName=com.atypon.analytics_service&dependencies=web,data-mongodb,mysql

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>Analyzed Data</h2>
+<table border="1">
+    <tr>
+        <th>Time in the day</th>
+        <th>Lowest Temperature</th>
+        <th>Highest Temperature</th>
+        <th>Average of temperatures</th>
+    </tr>
+    <tr th:each = "row: ${rows}">
+        <td th:text="${row.daytime}"></td>
+        <td th:text="${row.lowestTemp}"></td>
+        <td th:text="${row.highestTemp}"></td>
+        <td th:text="${row.avgTemp}"></td>
+    </tr>
+</table>
+<p>
+    <button onclick="location.href = 'http://localhost:8080/home';" id="0" class="float-left submit-button" >Home Page</button>
+</p>
+</body>
+</html>

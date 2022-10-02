@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<h2>All Data</h2>
+<table border="1">
+  <tr>
+    <th>Date</th>
+    <th>Morning Temperature</th>
+    <th>Night Temperature</th>
+  </tr>
+  <tr th:each = "row: ${rows}">
+    <td th:text="${row.date}"></td>
+    <td th:text="${row.morningTemp}"></td>
+    <td th:text="${row.nightTemp}"></td>
+  </tr>
+</table>
+<p>
+  <button onclick="location.href = 'http://localhost:8080/home';" id="0" class="float-left submit-button" >Home Page</button>
+</p>
+</body>
+</html>
