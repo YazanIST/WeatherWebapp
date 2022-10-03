@@ -21,7 +21,7 @@ public class WeatherEntryService {
         return jdbc.query("SELECT * FROM weather_entries", new WeatherEntryRowMapper());
     }
 
-    public void addWeatherEntry(WeatherEntry weatherEntry) {
+    public boolean addWeatherEntry(WeatherEntry weatherEntry) {
         try {
             jdbc.update(
                     "INSERT INTO weather_entries(date, morning_temp, night_temp) VALUES(?,?,?)",
@@ -30,7 +30,8 @@ public class WeatherEntryService {
                     weatherEntry.getNightTemp()
             );
         } catch (DataIntegrityViolationException e) {
-            System.out.println("day already exist");
+            return false;
         }
+        return true;
     }
 }

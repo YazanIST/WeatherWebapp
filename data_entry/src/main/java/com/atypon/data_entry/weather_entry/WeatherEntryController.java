@@ -47,8 +47,11 @@ public class WeatherEntryController {
     @PostMapping("/add")
     public String addWeatherEntry(@ModelAttribute WeatherEntry weatherEntry) {
         if (authenticationService.isAuthenticated()) {
-            weatherEntryService.addWeatherEntry(weatherEntry);
-            return "after-add";
+            if (weatherEntryService.addWeatherEntry(weatherEntry)) {
+                return "after-add";
+            } else {
+                return "failed-add";
+            }
         }
         return "redirect:authenticate";
     }
