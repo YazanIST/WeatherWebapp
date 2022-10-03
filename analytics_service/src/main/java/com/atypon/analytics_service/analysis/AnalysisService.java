@@ -43,6 +43,14 @@ public class AnalysisService {
                         getMaxNight()
                 )
         );
+        addAnalyzedData(
+                new AnalyzedData(
+                        "all-day",
+                        Math.min(getMinMorning(), getMinNight()),
+                        (getAvgMorning() + getAvgNight()) / 2.0,
+                        Math.max(getMaxMorning(), getMaxNight())
+                )
+        );
     }
 
     private void clear() {
