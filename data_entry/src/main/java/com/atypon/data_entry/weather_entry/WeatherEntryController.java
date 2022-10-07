@@ -66,10 +66,4 @@ public class WeatherEntryController {
         authenticationService.setAuthenticationStatus(false);
         return "index";
     }
-
-    @GetMapping("/weatherentry")
-    @ResponseBody
-    public List<WeatherEntry> getWeatherEntries() {
-        return weatherEntryService.getWeatherEntries();
-    }
 }
